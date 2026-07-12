@@ -22,7 +22,7 @@ public class VaultIntegration {
                 econ = rsp.getProvider();
                 plugin.getLogger().log(Level.INFO, "成功接入 Vault");
             } else {
-                plugin.getLogger().log(Level.WARNING, "無法接入 Vault. 如果你是 CMI 用户, 請至配置文件啓用經濟系統");
+                plugin.getLogger().log(Level.WARNING, "無法接入 Vault. 如果你是 CMI 用户, 請至配置文件啟用經濟系統");
             }
         } else {
             plugin.getLogger().log(Level.WARNING, "服務端未安裝 Vault, 遊戲幣解鎖研究特性將無法使用");

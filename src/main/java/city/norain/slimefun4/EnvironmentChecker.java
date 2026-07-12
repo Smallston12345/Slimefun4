@@ -25,7 +25,7 @@ class EnvironmentChecker {
         logger.log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         logger.log(Level.WARNING, "檢測到不兼容的插件, 已自動禁用 Slimefun!");
         logger.log(Level.WARNING, "不兼容插件列表: ", String.join(", ", plugins));
-        logger.log(Level.WARNING, "這些插件出現在這裏是因為它們已不兼容現有");
+        logger.log(Level.WARNING, "這些插件出現在這裡是因為它們已不兼容現有");
         logger.log(Level.WARNING, "Slimefun 版本或是與 Slimefun 衝突.");
         logger.log(Level.WARNING, "如果你覺得這些插件能夠與 Slimefun 並存,");
         logger.log(Level.WARNING, "請聯繫我們修改.");

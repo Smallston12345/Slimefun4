@@ -119,7 +119,7 @@ public class DebugFishListener implements Listener {
                             .ifPresentOrElse(
                                     (uuid) -> {
                                         p.sendMessage(ChatColors.color(
-                                                "&c检测到损坏的通用数据物品, UUID: " + uuid + ", 请检查数据库对应数据是否存在!"));
+                                                "&c檢測到損壞的通用數據物品, UUID: " + uuid + ", 請檢查數據庫對應數據是否存在!"));
                                         sendVanillaInfo(p, b);
                                     },
                                     () -> sendVanillaInfo(p, b)));

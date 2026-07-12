@@ -28,7 +28,7 @@ public class VersionedMiddleClickListener implements Listener {
             getBlockMethod.setAccessible(true);
             plugin.getServer().getPluginManager().registerEvents(this, plugin);
         } catch (Throwable e) {
-            Slimefun.logger().log(Level.WARNING, "无法初始化中键监听器版本兼容模块, 部分功能可能无法正常使用", e);
+            Slimefun.logger().log(Level.WARNING, "無法初始化中鍵監聽器版本兼容模塊, 部分功能可能無法正常使用", e);
         }
     }
 

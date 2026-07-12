@@ -94,7 +94,7 @@ public class ProgrammableAndroid extends SlimefunItem
         texture = item.getSkullTexture().orElse(null);
         registerDefaultFuelTypes();
 
-        new UniversalMenuPreset(getId(), "可编程式机器人") {
+        new UniversalMenuPreset(getId(), "可編程式機器人") {
 
             @Override
             public void init() {
@@ -127,7 +127,7 @@ public class ProgrammableAndroid extends SlimefunItem
                 var uniData = StorageCacheUtils.getUniversalBlock(menu.getUuid());
 
                 menu.replaceExistingItem(
-                        15, new CustomItemStack(HeadTexture.SCRIPT_START.getAsItemStack(), "&a启动/继续运行"));
+                        15, new CustomItemStack(HeadTexture.SCRIPT_START.getAsItemStack(), "&a啓動/繼續運行"));
                 menu.addMenuClickHandler(15, (p, slot, item, action) -> {
                     Slimefun.getLocalization().sendMessage(p, "android.started", true);
                     uniData.setData("paused", "false");
@@ -135,7 +135,7 @@ public class ProgrammableAndroid extends SlimefunItem
                     return false;
                 });
 
-                menu.replaceExistingItem(17, new CustomItemStack(HeadTexture.SCRIPT_PAUSE.getAsItemStack(), "&4暂停运行"));
+                menu.replaceExistingItem(17, new CustomItemStack(HeadTexture.SCRIPT_PAUSE.getAsItemStack(), "&4暫停運行"));
                 menu.addMenuClickHandler(17, (p, slot, item, action) -> {
                     uniData.setData("paused", "true");
                     Slimefun.getLocalization().sendMessage(p, "android.stopped", true);
@@ -145,7 +145,7 @@ public class ProgrammableAndroid extends SlimefunItem
                 menu.replaceExistingItem(
                         16,
                         new CustomItemStack(
-                                HeadTexture.ENERGY_REGULATOR.getAsItemStack(), "&b内存核心", "", "&8\u21E8 &7单击打开脚本编辑器"));
+                                HeadTexture.ENERGY_REGULATOR.getAsItemStack(), "&b內存核心", "", "&8\u21E8 &7單擊打開腳本編輯器"));
                 menu.addMenuClickHandler(16, (p, slot, item, action) -> {
                     uniData.setData("paused", "true");
                     Slimefun.getLocalization().sendMessage(p, "android.stopped", true);
@@ -291,7 +291,7 @@ public class ProgrammableAndroid extends SlimefunItem
                         Instruction.START.getItem(),
                         Slimefun.getLocalization().getMessage(p, "android.scripts.instructions.START"),
                         "",
-                        "&7\u21E8 &e左键 &7返回机器人的控制面板"));
+                        "&7\u21E8 &e左鍵 &7返回機器人的控制面板"));
         menu.addMenuClickHandler(0, (pl, slot, item, action) -> {
             UniversalMenu inv = uniData.getMenu();
             // Fixes #2937
@@ -326,7 +326,7 @@ public class ProgrammableAndroid extends SlimefunItem
                                 Instruction.REPEAT.getItem(),
                                 Slimefun.getLocalization().getMessage(p, "android.scripts.instructions.REPEAT"),
                                 "",
-                                "&7\u21E8 &e左键 &7返回机器人的控制面板"));
+                                "&7\u21E8 &e左鍵 &7返回機器人的控制面板"));
                 menu.addMenuClickHandler(slot, (pl, s, item, action) -> {
                     UniversalMenu inv = uniData.getMenu();
                     // Fixes #2937
@@ -362,9 +362,9 @@ public class ProgrammableAndroid extends SlimefunItem
                                                         + Instruction.valueOf(script[i])
                                                                 .name()),
                                 "",
-                                "&7\u21E8 &e左键 &7编辑",
-                                "&7\u21E8 &e右键 &7删除",
-                                "&7\u21E8 &eShift + 右键 &7复制"));
+                                "&7\u21E8 &e左鍵 &7編輯",
+                                "&7\u21E8 &e右鍵 &7刪除",
+                                "&7\u21E8 &eShift + 右鍵 &7複製"));
                 menu.addMenuClickHandler(i, (pl, slot, item, action) -> {
                     if (action.isRightClicked() && action.isShiftClicked()) {
                         if (script.length == 54) {
@@ -446,7 +446,7 @@ public class ProgrammableAndroid extends SlimefunItem
     }
 
     protected void openScriptDownloader(Player p, SlimefunUniversalBlockData uniData, int page) {
-        ChestMenu menu = new ChestMenu("机器人脚本");
+        ChestMenu menu = new ChestMenu("機器人腳本");
 
         menu.setEmptySlotsClickable(false);
         menu.addMenuOpeningHandler(SoundEffect.PROGRAMMABLE_ANDROID_SCRIPT_DOWNLOAD_SOUND::playFor);
@@ -474,7 +474,7 @@ public class ProgrammableAndroid extends SlimefunItem
         menu.addItem(
                 48,
                 new CustomItemStack(
-                        HeadTexture.SCRIPT_UP.getAsItemStack(), "&e上传脚本", "", "&6单击 &7将你正在用的脚本", "&7上传到服务器"));
+                        HeadTexture.SCRIPT_UP.getAsItemStack(), "&e上傳腳本", "", "&6單擊 &7將你正在用的腳本", "&7上傳到服務器"));
         menu.addMenuClickHandler(48, (pl, slot, item, action) -> {
             uploadScript(pl, uniData, page);
             return false;
@@ -492,7 +492,7 @@ public class ProgrammableAndroid extends SlimefunItem
             return false;
         });
 
-        menu.addItem(53, new CustomItemStack(HeadTexture.SCRIPT_LEFT.getAsItemStack(), "&6> 返回", "", "&7返回机器人控制面板"));
+        menu.addItem(53, new CustomItemStack(HeadTexture.SCRIPT_LEFT.getAsItemStack(), "&6> 返回", "", "&7返回機器人控制面板"));
         menu.addMenuClickHandler(53, (pl, slot, item, action) -> {
             openScriptEditor(pl, uniData);
             return false;
@@ -574,7 +574,7 @@ public class ProgrammableAndroid extends SlimefunItem
                 new ChestMenu(ChatColor.DARK_AQUA + Slimefun.getLocalization().getMessage(p, "android.scripts.editor"));
         menu.setEmptySlotsClickable(false);
 
-        menu.addItem(1, new CustomItemStack(HeadTexture.SCRIPT_FORWARD.getAsItemStack(), "&2> 编辑脚本", "", "&a修改你现有的脚本"));
+        menu.addItem(1, new CustomItemStack(HeadTexture.SCRIPT_FORWARD.getAsItemStack(), "&2> 編輯腳本", "", "&a修改你現有的腳本"));
         menu.addMenuClickHandler(1, (pl, slot, item, action) -> {
             String script = getScript(uniData);
             if (CommonPatterns.DASH.split(script).length <= MAX_SCRIPT_LENGTH) {
@@ -589,7 +589,7 @@ public class ProgrammableAndroid extends SlimefunItem
         menu.addItem(
                 3,
                 new CustomItemStack(
-                        HeadTexture.SCRIPT_NEW.getAsItemStack(), "&4> 创建新脚本", "", "&c删除你正在使用的脚本", "&c并创建一个全新的空白脚本"));
+                        HeadTexture.SCRIPT_NEW.getAsItemStack(), "&4> 創建新腳本", "", "&c刪除你正在使用的腳本", "&c並創建一個全新的空白腳本"));
         menu.addMenuClickHandler(3, (pl, slot, item, action) -> {
             openScript(pl, uniData, DEFAULT_SCRIPT);
             return false;
@@ -599,16 +599,16 @@ public class ProgrammableAndroid extends SlimefunItem
                 5,
                 new CustomItemStack(
                         HeadTexture.SCRIPT_DOWN.getAsItemStack(),
-                        "&6> 下载脚本",
+                        "&6> 下載腳本",
                         "",
-                        "&e从服务器中下载其他玩家上传的脚本",
-                        "&e可以即下即用, 或者修改之后再使用"));
+                        "&e從服務器中下載其他玩家上傳的腳本",
+                        "&e可以即下即用, 或者修改之後再使用"));
         menu.addMenuClickHandler(5, (pl, slot, item, action) -> {
             openScriptDownloader(pl, uniData, 1);
             return false;
         });
 
-        menu.addItem(8, new CustomItemStack(HeadTexture.SCRIPT_LEFT.getAsItemStack(), "&6> 返回", "", "&7返回机器人控制面板"));
+        menu.addItem(8, new CustomItemStack(HeadTexture.SCRIPT_LEFT.getAsItemStack(), "&6> 返回", "", "&7返回機器人控制面板"));
         menu.addMenuClickHandler(8, (pl, slot, item, action) -> {
             UniversalMenu inv = uniData.getMenu();
             // Fixes #2937
@@ -648,7 +648,7 @@ public class ProgrammableAndroid extends SlimefunItem
         menu.setEmptySlotsClickable(false);
         menu.addItem(
                 9,
-                new CustomItemStack(HeadTexture.SCRIPT_PAUSE.getAsItemStack(), "&f什么也不做"),
+                new CustomItemStack(HeadTexture.SCRIPT_PAUSE.getAsItemStack(), "&f什麼也不做"),
                 (pl, slot, item, action) -> {
                     String code = deleteInstruction(script, index);
                     setScript(uniData, code);
@@ -751,7 +751,7 @@ public class ProgrammableAndroid extends SlimefunItem
             ItemStack item = fuel.getInput().clone();
             ItemMeta im = item.getItemMeta();
             List<String> lore = new ArrayList<>();
-            lore.add(ChatColors.color("&8\u21E8 &7剩余 " + NumberUtils.getTimeLeft(fuel.getTicks() / 2)));
+            lore.add(ChatColors.color("&8\u21E8 &7剩餘 " + NumberUtils.getTimeLeft(fuel.getTicks() / 2)));
             im.setLore(lore);
             item.setItemMeta(im);
             list.add(item);

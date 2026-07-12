@@ -52,17 +52,17 @@ public class StringUtil {
     }
 
     /**
-     * 格式化详细线程信息
+     * 格式化詳細線程信息
      */
     public static String formatDetailedThreadInfo(ThreadInfo threadInfo) {
         StringBuilder sb = new StringBuilder();
 
-        // 线程名和基本信息
+        // 線程名和基本信息
         sb.append(threadInfo.getThreadName());
         sb.append(" #").append(threadInfo.getThreadId());
         sb.append(" ").append(threadInfo.getThreadState());
 
-        // 锁信息
+        // 鎖信息
         if (threadInfo.getLockName() != null) {
             sb.append(" on ").append(threadInfo.getLockName());
             if (threadInfo.getLockOwnerName() != null) {
@@ -73,7 +73,7 @@ public class StringUtil {
 
         sb.append("\n");
 
-        // 线程状态详情
+        // 線程狀態詳情
         sb.append("   Thread.State: ").append(threadInfo.getThreadState());
         if (threadInfo.getBlockedTime() > 0) {
             sb.append(" (blocked for ").append(threadInfo.getBlockedTime()).append("ms)");
@@ -83,19 +83,19 @@ public class StringUtil {
         }
         sb.append("\n");
 
-        // 堆栈跟踪
+        // 堆棧跟蹤
         StackTraceElement[] stackTrace = threadInfo.getStackTrace();
         for (int i = 0; i < stackTrace.length; i++) {
             StackTraceElement element = stackTrace[i];
             sb.append("\tat ").append(element.toString()).append("\n");
 
-            // 第一个堆栈元素的锁信息
+            // 第一個堆棧元素的鎖信息
             if (i == 0 && threadInfo.getLockName() != null) {
                 sb.append("\t- ").append(getThreadStateDescription(threadInfo)).append("\n");
             }
         }
 
-        // 持有的锁
+        // 持有的鎖
         if (threadInfo.getLockedMonitors().length > 0) {
             sb.append("   Locked monitors:\n");
             Arrays.stream(threadInfo.getLockedMonitors())

@@ -314,9 +314,9 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
             String lore;
 
             if (VaultIntegration.isEnabled()) {
-                lore = String.format("%.2f", research.getCurrencyCost()) + " 游戏币";
+                lore = String.format("%.2f", research.getCurrencyCost()) + " 遊戲幣";
             } else {
-                lore = research.getLevelCost() + " 级经验";
+                lore = research.getLevelCost() + " 級經驗";
             }
 
             menu.addItem(
@@ -327,7 +327,7 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
                             "&7" + sfitem.getId(),
                             "&4&l" + Slimefun.getLocalization().getMessage(p, "guide.locked"),
                             "",
-                            "&a> 单击解锁",
+                            "&a> 單擊解鎖",
                             "",
                             "&7需要 &b",
                             lore)));
@@ -700,7 +700,7 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
         if (isSurvivalMode() && history.size() > 1) {
             menu.addItem(
                     slot,
-                    new CustomItemStack(ChestMenuUtils.getBackButton(p, "", "&f左键: &7返回上一页", "&fShift + 左键: &7返回主菜单")));
+                    new CustomItemStack(ChestMenuUtils.getBackButton(p, "", "&f左鍵: &7返回上一頁", "&fShift + 左鍵: &7返回主菜單")));
 
             menu.addMenuClickHandler(slot, (pl, s, is, action) -> {
                 if (action.isShiftClicked()) {
@@ -733,8 +733,8 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
             }
 
             String lore = hasPermission(p, slimefunItem)
-                    ? "&f需要在 " + slimefunItem.getItemGroup().getDisplayName(p) + " 中解锁"
-                    : "&f无权限";
+                    ? "&f需要在 " + slimefunItem.getItemGroup().getDisplayName(p) + " 中解鎖"
+                    : "&f無權限";
             return slimefunItem.canUse(p, false)
                     ? item
                     : new CustomItemStack(
@@ -846,8 +846,8 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
 
     @ParametersAreNonnullByDefault
     private void printErrorMessage(Player p, Throwable x) {
-        p.sendMessage(ChatColor.DARK_RED + "服务器发生了一个内部错误. 请联系管理员处理.");
-        Slimefun.logger().log(Level.SEVERE, "在打开指南书里的 Slimefun 物品时发生了意外!", x);
+        p.sendMessage(ChatColor.DARK_RED + "服務器發生了一個內部錯誤. 請聯繫管理員處理.");
+        Slimefun.logger().log(Level.SEVERE, "在打開指南書裏的 Slimefun 物品時發生了意外!", x);
     }
 
     @ParametersAreNonnullByDefault

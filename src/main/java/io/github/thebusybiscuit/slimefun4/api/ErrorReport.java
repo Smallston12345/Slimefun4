@@ -81,29 +81,29 @@ public class ErrorReport<T extends Throwable> {
     @ParametersAreNonnullByDefault
     public ErrorReport(T throwable, Location l, SlimefunItem item) {
         this(throwable, item.getAddon(), stream -> {
-            stream.println("方块信息:");
+            stream.println("方塊信息:");
             stream.println("  世界: " + l.getWorld().getName());
             stream.println("  X: " + l.getBlockX());
             stream.println("  Y: " + l.getBlockY());
             stream.println("  Z: " + l.getBlockZ());
-            stream.println("  方块类型: " + l.getBlock().getType());
-            stream.println("  方块数据: " + l.getBlock().getBlockData().getClass().getName());
-            stream.println("  状态: " + l.getBlock().getState().getClass().getName());
+            stream.println("  方塊類型: " + l.getBlock().getType());
+            stream.println("  方塊數據: " + l.getBlock().getBlockData().getClass().getName());
+            stream.println("  狀態: " + l.getBlock().getState().getClass().getName());
             stream.println();
 
             if (item.getBlockTicker() != null) {
                 stream.println("Ticker 信息:");
-                stream.println("  类型: " + (item.getBlockTicker().isSynchronized() ? "同步" : "异步"));
+                stream.println("  類型: " + (item.getBlockTicker().isSynchronized() ? "同步" : "異步"));
                 stream.println();
             }
 
             if (item instanceof EnergyNetProvider) {
                 stream.println("Ticker 信息:");
-                stream.println("  类型: 间接 (由能源网络管理)");
+                stream.println("  類型: 間接 (由能源網絡管理)");
                 stream.println();
             }
 
-            stream.println("Slimefun 数据:");
+            stream.println("Slimefun 數據:");
             stream.println("  ID: " + item.getId());
             var blockData =
                     Slimefun.getDatabaseManager().getBlockDataController().getBlockData(l);
@@ -117,21 +117,21 @@ public class ErrorReport<T extends Throwable> {
                                             .getBlockDataController()
                                             .getUniversalBlockDataFromCache(uuid);
                                     if (universalData != null) {
-                                        stream.println("  数据加载状态: " + universalData.isDataLoaded());
-                                        stream.println("  物品栏: " + (universalData.getMenu() != null));
-                                        stream.println("  数据: ");
+                                        stream.println("  數據加載狀態: " + universalData.isDataLoaded());
+                                        stream.println("  物品欄: " + (universalData.getMenu() != null));
+                                        stream.println("  數據: ");
                                         universalData
                                                 .getAllData()
                                                 .forEach((k, v) -> stream.println("    " + k + ": " + v));
                                     } else {
-                                        stream.println("该方块没有任何数据.");
+                                        stream.println("該方塊沒有任何數據.");
                                     }
                                 },
-                                () -> stream.println("该方块没有任何数据.")));
+                                () -> stream.println("該方塊沒有任何數據.")));
             } else {
-                stream.println("  数据加载状态: " + blockData.isDataLoaded());
-                stream.println("  物品栏: " + (blockData.getBlockMenu() != null));
-                stream.println("  数据: ");
+                stream.println("  數據加載狀態: " + blockData.isDataLoaded());
+                stream.println("  物品欄: " + (blockData.getBlockMenu() != null));
+                stream.println("  數據: ");
                 blockData.getAllData().forEach((k, v) -> stream.println("    " + k + ": " + v));
             }
             stream.println();

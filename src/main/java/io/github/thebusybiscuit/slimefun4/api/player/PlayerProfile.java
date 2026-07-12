@@ -365,10 +365,10 @@ public class PlayerProfile {
         float progress = Math.round(((unlockedResearches * 100.0F) / allResearches) * 100.0F) / 100.0F;
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColors.color("&7玩家研究统计: &b" + getPlayer()));
+        sender.sendMessage(ChatColors.color("&7玩家研究統計: &b" + getPlayer()));
         sender.sendMessage("");
-        sender.sendMessage(ChatColors.color("&7研究等级: " + ChatColor.AQUA + getTitle()));
-        sender.sendMessage(ChatColors.color("&7研究进度: "
+        sender.sendMessage(ChatColors.color("&7研究等級: " + ChatColor.AQUA + getTitle()));
+        sender.sendMessage(ChatColors.color("&7研究進度: "
                 + NumberUtils.getColorFromPercentage(progress)
                 + progress
                 + " &r% "
@@ -378,7 +378,7 @@ public class PlayerProfile {
                 + " / "
                 + allResearches
                 + ')'));
-        sender.sendMessage(ChatColors.color("&7解锁总耗费经验: " + ChatColor.AQUA + levels));
+        sender.sendMessage(ChatColors.color("&7解鎖總耗費經驗: " + ChatColor.AQUA + levels));
     }
 
     /**
@@ -431,7 +431,7 @@ public class PlayerProfile {
         }
 
         if (processProfiles.containsKey(uuid)) {
-            // 当前玩家档案正在加载
+            // 當前玩家檔案正在加載
             return false;
         }
 
@@ -456,7 +456,7 @@ public class PlayerProfile {
 
         var profile = Slimefun.getRegistry().getPlayerProfiles().get(p.getUniqueId());
         if (profile == null || profile.markedForDeletion) {
-            // 当前玩家档案正在被加载
+            // 當前玩家檔案正在被加載
             if (processProfiles.containsKey(p.getUniqueId())) {
                 return false;
             }

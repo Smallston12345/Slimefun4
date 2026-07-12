@@ -264,10 +264,10 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
         } else if (!PaperLib.isPaper()) {
             getLogger().log(Level.WARNING, "#######################################################");
             getLogger().log(Level.WARNING, "");
-            getLogger().log(Level.WARNING, "自 24/12/22 起 Slimefun 汉化版");
-            getLogger().log(Level.WARNING, "转为 Paper 插件, 你必须要使用 Paper");
+            getLogger().log(Level.WARNING, "自 24/12/22 起 Slimefun 漢化版");
+            getLogger().log(Level.WARNING, "轉為 Paper 插件, 你必須要使用 Paper");
             getLogger().log(Level.WARNING, "或其分支才可使用 Slimefun.");
-            getLogger().log(Level.WARNING, "立即下载 Paper: https://papermc.io/downloads/paper");
+            getLogger().log(Level.WARNING, "立即下載 Paper: https://papermc.io/downloads/paper");
             getLogger().log(Level.WARNING, "");
             getLogger().log(Level.WARNING, "#######################################################");
             getServer().getPluginManager().disablePlugin(this);
@@ -314,23 +314,23 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
         isNewlyInstalled = !new File("data-storage/Slimefun").exists();
 
         // Creating all necessary Folders
-        logger.log(Level.INFO, "正在创建文件夹...");
+        logger.log(Level.INFO, "正在創建文件夾...");
         createDirectories();
 
         // Load various config settings into our cache
         cfgManager.load();
         registry.load(this);
 
-        logger.log(Level.INFO, "正在加载数据库...");
+        logger.log(Level.INFO, "正在加載數據庫...");
         if (PlayerProfileMigrator.getInstance().hasOldData()
                 || BlockStorageMigrator.getInstance().hasOldData()) {
             Slimefun.logger().warning("====================================================");
             Slimefun.logger().warning("\n");
-            Slimefun.logger().log(Level.WARNING, "!!! 检测到使用文件储存的旧玩家数据 !!!");
-            Slimefun.logger().warning("请在服务器加载完成后, 使用 /sf migrate confirm 进行迁移!");
-            Slimefun.logger().warning("如果不迁移, 旧版本的数据将会失效!!!");
+            Slimefun.logger().log(Level.WARNING, "!!! 檢測到使用文件儲存的舊玩家數據 !!!");
+            Slimefun.logger().warning("請在服務器加載完成後, 使用 /sf migrate confirm 進行遷移!");
+            Slimefun.logger().warning("如果不遷移, 舊版本的數據將會失效!!!");
             Slimefun.logger().warning("\n");
-            Slimefun.logger().warning("需要使用数据库的用户, 请关服后在以下配置文件中配置数据库:");
+            Slimefun.logger().warning("需要使用數據庫的用户, 請關服後在以下配置文件中配置數據庫:");
             Slimefun.logger().warning("block-storage.yml 和 profile-storage.yml");
             Slimefun.logger().warning("\n");
             Slimefun.logger().warning("====================================================");
@@ -338,7 +338,7 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
         databaseManager.init();
 
         // Set up localization
-        logger.log(Level.INFO, "正在加载语言文件...");
+        logger.log(Level.INFO, "正在加載語言文件...");
 
         var config = cfgManager.getPluginConfig();
         String chatPrefix = config.getString("options.chat-prefix");
@@ -349,7 +349,7 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
 
         // Make sure that the network size is a valid input
         if (networkSize < 1) {
-            logger.log(Level.WARNING, "'networks.max-size' 大小设置错误! 它必须大于1, 而你设置的是: {0}", networkSize);
+            logger.log(Level.WARNING, "'networks.max-size' 大小設置錯誤! 它必須大於1, 而你設置的是: {0}", networkSize);
             networkSize = 1;
         }
 
@@ -363,22 +363,22 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
         analyticsService.start();
 
         // Registering all GEO Resources
-        logger.log(Level.INFO, "加载矿物资源...");
+        logger.log(Level.INFO, "加載礦物資源...");
         GEOResourcesSetup.setup();
 
-        logger.log(Level.INFO, "加载自定义标签...");
+        logger.log(Level.INFO, "加載自定義標籤...");
         loadTags();
 
-        logger.log(Level.INFO, "加载物品...");
+        logger.log(Level.INFO, "加載物品...");
         loadItems();
 
-        logger.log(Level.INFO, "加载研究项目...");
+        logger.log(Level.INFO, "加載研究項目...");
         loadResearches();
 
         PostSetup.setupWiki();
 
         // All Slimefun Listeners
-        logger.log(Level.INFO, "正在注册监听器...");
+        logger.log(Level.INFO, "正在註冊監聽器...");
 
         // Inject downstream extra staff
         SlimefunExtended.init(this);
@@ -435,18 +435,18 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
         hologramsService.start();
         ticker.start(this);
 
-        logger.log(Level.INFO, "正在加载第三方插件支持...");
+        logger.log(Level.INFO, "正在加載第三方插件支持...");
         integrations.start();
 
         gitHubService.start(this);
 
         if (cfgManager.isAutoUpdate()) {
-            // 汉化版自动更新
+            // 漢化版自動更新
             Bukkit.getScheduler().scheduleSyncDelayedTask(this, new AutoUpdateTask(this, getFile()));
         }
 
         // Hooray!
-        logger.log(Level.INFO, "Slimefun 完成加载, 耗时 {0}", getStartupTime(timestamp));
+        logger.log(Level.INFO, "Slimefun 完成加載, 耗時 {0}", getStartupTime(timestamp));
     }
 
     @Override
@@ -598,7 +598,7 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
                 getLogger()
                         .log(
                                 Level.WARNING,
-                                "我们无法识别你正在使用的 Minecraft 版本 ({0})",
+                                "我們無法識別你正在使用的 Minecraft 版本 ({0})",
                                 getServer().getMinecraftVersion());
                 return false;
             }
@@ -626,7 +626,7 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
                     .log(
                             Level.SEVERE,
                             x,
-                            () -> "错误: 无法识别服务器 Minecraft 版本, Slimefun v"
+                            () -> "錯誤: 無法識別服務器 Minecraft 版本, Slimefun v"
                                     + getDescription().getVersion());
 
             // We assume "unsupported" if something went wrong.

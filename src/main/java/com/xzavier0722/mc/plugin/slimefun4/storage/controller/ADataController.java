@@ -24,10 +24,10 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * {@link ADataController} 是 Slimefun 数据库控制器的抽象类，
- * 提供了对数据源适配器的访问和数据操作的基本方法。
+ * {@link ADataController} 是 Slimefun 數據庫控制器的抽象類，
+ * 提供了對數據源適配器的訪問和數據操作的基本方法。
  * <br/>
- * 该类提供了对数据库的增删查改操作以及异步读写的支持。
+ * 該類提供了對數據庫的增刪查改操作以及異步讀寫的支持。
  */
 @Slf4j
 public abstract class ADataController {
@@ -37,23 +37,23 @@ public abstract class ADataController {
 
     private volatile IDataSourceAdapter<?> dataAdapter;
     /**
-     * 数据库读取调度器
+     * 數據庫讀取調度器
      */
     protected ExecutorService readExecutor;
     /**
-     * 数据库写入调度器
+     * 數據庫寫入調度器
      */
     protected ExecutorService writeExecutor;
 
     protected ExecutorService serialWriteExecutor;
 
     /**
-     * 数据库回调调度器
+     * 數據庫回調調度器
      */
     @Getter
     protected ExecutorService callbackExecutor;
     /**
-     * 标记当前控制器是否已被关闭
+     * 標記當前控制器是否已被關閉
      */
     private volatile boolean destroyed = false;
 
@@ -126,7 +126,7 @@ public abstract class ADataController {
     }
 
     /**
-     * 正常关闭 {@link ADataController}
+     * 正常關閉 {@link ADataController}
      */
     @OverridingMethodsMustInvokeSuper
     public void shutdown() {
@@ -144,13 +144,13 @@ public abstract class ADataController {
 
             while (pendingTask > 0) {
                 var doneTaskPercent = String.format("%.1f", (totalTask - pendingTask) / totalTask * 100);
-                logger.log(Level.INFO, "数据保存中，请稍候... 剩余 {0} 个任务 ({1}%)", new Object[] {pendingTask, doneTaskPercent});
+                logger.log(Level.INFO, "數據保存中，請稍候... 剩餘 {0} 個任務 ({1}%)", new Object[] {pendingTask, doneTaskPercent});
                 TimeUnit.SECONDS.sleep(1);
                 var currentTask = scheduledWriteTasks.size();
 
                 if (pendingTask == currentTask) {
                     if (timer.peek() / 1000 > 10) {
-                        Slimefun.logger().log(Level.WARNING, "检测到耗时保存任务, 请将下面的线程堆栈 完整 发送给开发者以便定位问题: ");
+                        Slimefun.logger().log(Level.WARNING, "檢測到耗時保存任務, 請將下面的線程堆棧 完整 發送給開發者以便定位問題: ");
                         Slimefun.logger()
                                 .log(Level.WARNING, Slimefun.getProfiler().snapshotThreads());
                     }
@@ -161,7 +161,7 @@ public abstract class ADataController {
                 pendingTask = scheduledWriteTasks.size();
             }
 
-            logger.info("数据保存完成.");
+            logger.info("數據保存完成.");
         } catch (InterruptedException e) {
             logger.log(Level.WARNING, "Exception thrown while saving data: ", e);
         }

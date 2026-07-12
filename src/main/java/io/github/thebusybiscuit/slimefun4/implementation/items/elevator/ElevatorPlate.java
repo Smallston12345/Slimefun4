@@ -77,7 +77,7 @@ public class ElevatorPlate extends SimpleSlimefunItem<BlockUseHandler> {
             @Override
             public void onPlayerPlace(BlockPlaceEvent e) {
                 var blockData = StorageCacheUtils.getBlock(e.getBlock().getLocation());
-                blockData.setData(DATA_KEY, ChatColor.WHITE + "一楼");
+                blockData.setData(DATA_KEY, ChatColor.WHITE + "一樓");
                 blockData.setData("owner", e.getPlayer().getUniqueId().toString());
             }
         };
@@ -269,7 +269,7 @@ public class ElevatorPlate extends SimpleSlimefunItem<BlockUseHandler> {
                 4,
                 new CustomItemStack(
                         Material.NAME_TAG,
-                        "&7楼层名 &e(单击编辑)",
+                        "&7樓層名 &e(單擊編輯)",
                         "",
                         ChatColor.WHITE + ChatColors.color(StorageCacheUtils.getData(b.getLocation(), DATA_KEY))));
         menu.addMenuClickHandler(4, (pl, slot, item, action) -> {

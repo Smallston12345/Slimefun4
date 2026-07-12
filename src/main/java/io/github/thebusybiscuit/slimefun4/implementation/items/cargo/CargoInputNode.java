@@ -59,10 +59,10 @@ public class CargoInputNode extends AbstractFilterNode {
                     24,
                     new CustomItemStack(
                             SlimefunUtils.getCustomHead(HeadTexture.ENERGY_REGULATOR.getTexture()),
-                            "&7轮循模式: &4\u2718",
+                            "&7輪循模式: &4\u2718",
                             "",
-                            "&e> 单击启用轮循模式",
-                            "&e(物品将会在信道中平均分配)"));
+                            "&e> 單擊啓用輪循模式",
+                            "&e(物品將會在信道中平均分配)"));
             menu.addMenuClickHandler(24, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), ROUND_ROBIN_MODE, String.valueOf(true));
                 updateBlockMenu(menu, b);
@@ -73,10 +73,10 @@ public class CargoInputNode extends AbstractFilterNode {
                     24,
                     new CustomItemStack(
                             SlimefunUtils.getCustomHead(HeadTexture.ENERGY_REGULATOR.getTexture()),
-                            "&7轮循模式: &2\u2714",
+                            "&7輪循模式: &2\u2714",
                             "",
-                            "&e> 单击关闭轮循模式",
-                            "&e(物品将会在信道中平均分配)"));
+                            "&e> 單擊關閉輪循模式",
+                            "&e(物品將會在信道中平均分配)"));
             menu.addMenuClickHandler(24, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), ROUND_ROBIN_MODE, String.valueOf(false));
                 updateBlockMenu(menu, b);
@@ -86,7 +86,7 @@ public class CargoInputNode extends AbstractFilterNode {
 
         String smartFillNode = blockData.getData(SMART_FILL_MODE);
 
-        // FIXME 需要改进翻译
+        // FIXME 需要改進翻譯
 
         if (smartFillNode == null || smartFillNode.equals(String.valueOf(false))) {
             menu.replaceExistingItem(
@@ -95,12 +95,12 @@ public class CargoInputNode extends AbstractFilterNode {
                             Material.WRITABLE_BOOK,
                             "&7\"智能填充\" 模式: &4\u2718",
                             "",
-                            "&e> 单击启用",
+                            "&e> 單擊啓用",
                             "",
-                            "&f打开后, 货运节点会尝试",
-                            "&f让货运网络中的物品保持在一定数量",
-                            "&f但这个功能并不完美",
-                            "&f仍会尝试填满在一堆物品前的空位"));
+                            "&f打開後, 貨運節點會嘗試",
+                            "&f讓貨運網絡中的物品保持在一定數量",
+                            "&f但這個功能並不完美",
+                            "&f仍會嘗試填滿在一堆物品前的空位"));
             menu.addMenuClickHandler(16, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), SMART_FILL_MODE, String.valueOf(true));
                 updateBlockMenu(menu, b);
@@ -113,12 +113,12 @@ public class CargoInputNode extends AbstractFilterNode {
                             Material.WRITTEN_BOOK,
                             "&7\"智能填充\" 模式: &2\u2714",
                             "",
-                            "&e> 单击禁用",
+                            "&e> 單擊禁用",
                             "",
-                            "&f打开后, 货运节点会尝试",
-                            "&f让货运网络中的物品保持在一定数量",
-                            "&f但这个功能并不完美",
-                            "&f仍会尝试填满在一堆物品前的空位"));
+                            "&f打開後, 貨運節點會嘗試",
+                            "&f讓貨運網絡中的物品保持在一定數量",
+                            "&f但這個功能並不完美",
+                            "&f仍會嘗試填滿在一堆物品前的空位"));
             menu.addMenuClickHandler(16, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), SMART_FILL_MODE, String.valueOf(false));
                 updateBlockMenu(menu, b);

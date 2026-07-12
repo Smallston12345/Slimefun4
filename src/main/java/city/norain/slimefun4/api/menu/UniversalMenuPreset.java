@@ -21,10 +21,10 @@ public abstract class UniversalMenuPreset extends BlockMenuPreset {
     }
 
     /**
-     * 创建一个新的菜单实例
+     * 創建一個新的菜單實例
      *
-     * @param menu {@link UniversalMenu} 通用菜单
-     * @param b 当前实例对应的方块，方块可能为空
+     * @param menu {@link UniversalMenu} 通用菜單
+     * @param b 當前實例對應的方塊，方塊可能為空
      */
     public void newInstance(@Nonnull UniversalMenu menu, @Nullable Block b) {
         // This method can optionally be overridden by implementations

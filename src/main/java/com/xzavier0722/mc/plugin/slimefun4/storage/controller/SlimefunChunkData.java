@@ -16,7 +16,7 @@ import org.bukkit.Chunk;
 import org.bukkit.Location;
 
 /**
- * {@link SlimefunChunkData} 是 Slimefun 中用于存储区块内所有方块数据的容器类。
+ * {@link SlimefunChunkData} 是 Slimefun 中用於存儲區塊內所有方塊數據的容器類。
  */
 public class SlimefunChunkData extends ADataContainer {
     private static final SlimefunBlockData INVALID_BLOCK_DATA = new SlimefunBlockData(

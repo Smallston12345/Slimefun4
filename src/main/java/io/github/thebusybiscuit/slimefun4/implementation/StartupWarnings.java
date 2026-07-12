@@ -23,17 +23,17 @@ final class StartupWarnings {
     @ParametersAreNonnullByDefault
     static void discourageCSCoreLib(Logger logger) {
         logger.log(Level.SEVERE, BORDER);
-        logger.log(Level.SEVERE, PREFIX + "你好像安装了 CS-CoreLib。");
+        logger.log(Level.SEVERE, PREFIX + "你好像安裝了 CS-CoreLib。");
         logger.log(Level.SEVERE, PREFIX);
-        logger.log(Level.SEVERE, PREFIX + "自 2021/01/30 起就不再强制依赖 CS-CoreLib 了");
-        logger.log(Level.SEVERE, PREFIX + "你需要卸载 CS-CoreLib 才能让 Slimefun 正常运行。");
+        logger.log(Level.SEVERE, PREFIX + "自 2021/01/30 起就不再強制依賴 CS-CoreLib 了");
+        logger.log(Level.SEVERE, PREFIX + "你需要卸載 CS-CoreLib 才能讓 Slimefun 正常運行。");
         logger.log(Level.SEVERE, BORDER);
     }
 
     @ParametersAreNonnullByDefault
     static void invalidMinecraftVersion(Logger logger, String detectedVer, String slimefunVersion) {
         logger.log(Level.SEVERE, BORDER);
-        logger.log(Level.SEVERE, PREFIX + "Slimefun 加载失败!");
+        logger.log(Level.SEVERE, PREFIX + "Slimefun 加載失敗!");
         logger.log(Level.SEVERE, PREFIX + "你正在使用不支持的 Minecraft 版本!");
         logger.log(Level.SEVERE, PREFIX);
         logger.log(Level.SEVERE, PREFIX + "你正在使用 Minecraft {0}", detectedVer);
@@ -45,11 +45,11 @@ final class StartupWarnings {
     @ParametersAreNonnullByDefault
     static void invalidServerSoftware(Logger logger) {
         logger.log(Level.SEVERE, BORDER);
-        logger.log(Level.SEVERE, PREFIX + "Slimefun 加载失败!");
-        logger.log(Level.SEVERE, PREFIX + "我们不再支持 CraftBukkit 服务端了!");
+        logger.log(Level.SEVERE, PREFIX + "Slimefun 加載失敗!");
+        logger.log(Level.SEVERE, PREFIX + "我們不再支持 CraftBukkit 服務端了!");
         logger.log(Level.SEVERE, PREFIX);
-        logger.log(Level.SEVERE, PREFIX + "你需要使用 Paper 或其分支的服务端");
-        logger.log(Level.SEVERE, PREFIX + "(我们推荐 Paper)");
+        logger.log(Level.SEVERE, PREFIX + "你需要使用 Paper 或其分支的服務端");
+        logger.log(Level.SEVERE, PREFIX + "(我們推薦 Paper)");
         logger.log(Level.SEVERE, BORDER);
     }
 
@@ -58,13 +58,13 @@ final class StartupWarnings {
         int javaVersion = NumberUtils.getJavaVersion();
 
         logger.log(Level.WARNING, BORDER);
-        logger.log(Level.WARNING, PREFIX + "正在使用的 Java 版本 (Java {0}) 已过时.", javaVersion);
+        logger.log(Level.WARNING, PREFIX + "正在使用的 Java 版本 (Java {0}) 已過時.", javaVersion);
         logger.log(Level.WARNING, PREFIX);
-        logger.log(Level.WARNING, PREFIX + "由于高版本 Minecraft 对 Java {0} 的强制依赖,", recommendedJavaVersion);
-        logger.log(Level.WARNING, PREFIX + "我们推荐您尽快升级到 Java {0}.", recommendedJavaVersion);
-        logger.log(Level.WARNING, PREFIX + "同时，为尽快使用到新版本 Java 带来的特性,");
-        logger.log(Level.WARNING, PREFIX + "Slimefun 也会在不久的将来依赖于 Java {0}.", recommendedJavaVersion);
-        logger.log(Level.WARNING, PREFIX + "为了不影响您以后的正常使用，请尽快更新!");
+        logger.log(Level.WARNING, PREFIX + "由於高版本 Minecraft 對 Java {0} 的強制依賴,", recommendedJavaVersion);
+        logger.log(Level.WARNING, PREFIX + "我們推薦您儘快升級到 Java {0}.", recommendedJavaVersion);
+        logger.log(Level.WARNING, PREFIX + "同時，為儘快使用到新版本 Java 帶來的特性,");
+        logger.log(Level.WARNING, PREFIX + "Slimefun 也會在不久的將來依賴於 Java {0}.", recommendedJavaVersion);
+        logger.log(Level.WARNING, PREFIX + "為了不影響您以後的正常使用，請儘快更新!");
         logger.log(Level.WARNING, BORDER);
     }
 }

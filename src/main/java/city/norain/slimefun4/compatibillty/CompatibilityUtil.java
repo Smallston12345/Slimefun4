@@ -12,12 +12,12 @@ import org.bukkit.block.data.type.WallSign;
 @UtilityClass
 public class CompatibilityUtil {
     /**
-     * 获取玩家放置此方块所使用的物品材质。
-     * 对于大多数方块，这与 getMaterial() 相同，但有些方块有不同的材质用于放置它们。
-     * 注意：此处没有涵盖所有可能不同的方块数据类型。
+     * 獲取玩家放置此方塊所使用的物品材質。
+     * 對於大多數方塊，這與 getMaterial() 相同，但有些方塊有不同的材質用於放置它們。
+     * 注意：此處沒有涵蓋所有可能不同的方塊數據類型。
      *
      * @param blockData
-     * @return 放置此方块所使用的材质
+     * @return 放置此方塊所使用的材質
      */
     public Material getPlacementMaterial(BlockData blockData) {
         if (SlimefunExtended.isAtLeast(1, 19, 4)) {
@@ -55,11 +55,11 @@ public class CompatibilityUtil {
     }
 
     /**
-     * 检查玩家是否处于连接状态。
-     * 在 1.20- 中不能保证玩家是否连接，仅返回在线状态。
+     * 檢查玩家是否處於連接狀態。
+     * 在 1.20- 中不能保證玩家是否連接，僅返回在線狀態。
      *
-     * @param player 离线玩家
-     * @return 玩家连接或在线
+     * @param player 離線玩家
+     * @return 玩家連接或在線
      */
     public boolean isConnected(OfflinePlayer player) {
         if (SlimefunExtended.isAtLeast(1, 20) && Slimefun.instance().getServer().getOnlineMode()) {

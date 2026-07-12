@@ -96,7 +96,7 @@ abstract class AbstractCargoNode extends SimpleSlimefunItem<BlockPlaceHandler> i
 
         menu.replaceExistingItem(
                 slotPrev,
-                new CustomItemStack(HeadTexture.CARGO_ARROW_LEFT.getAsItemStack(), "&b上一信道", "", "&e> 单击将信道ID减一"));
+                new CustomItemStack(HeadTexture.CARGO_ARROW_LEFT.getAsItemStack(), "&b上一信道", "", "&e> 點擊將信道ID減一"));
         menu.addMenuClickHandler(slotPrev, (p, slot, item, action) -> {
             int newChannel = channel - 1;
 
@@ -122,7 +122,7 @@ abstract class AbstractCargoNode extends SimpleSlimefunItem<BlockPlaceHandler> i
 
         menu.replaceExistingItem(
                 slotNext,
-                new CustomItemStack(HeadTexture.CARGO_ARROW_RIGHT.getAsItemStack(), "&b下一信道", "", "&e> 单击将信道ID加一"));
+                new CustomItemStack(HeadTexture.CARGO_ARROW_RIGHT.getAsItemStack(), "&b下一信道", "", "&e> 點擊將信道ID加一"));
         menu.addMenuClickHandler(slotNext, (p, slot, item, action) -> {
             int newChannel = channel + 1;
 

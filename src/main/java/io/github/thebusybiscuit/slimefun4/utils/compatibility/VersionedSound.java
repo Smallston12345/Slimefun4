@@ -36,7 +36,7 @@ public final class VersionedSound {
             }
             valueOfMethod = Sound.class.getMethod("valueOf", String.class);
         } catch (Exception e) {
-            Slimefun.logger().severe("无法确定 Sound 类型：" + e.getMessage());
+            Slimefun.logger().severe("無法確定 Sound 類型：" + e.getMessage());
         }
 
         IS_ENUM = isEnum;
@@ -49,10 +49,10 @@ public final class VersionedSound {
     }
 
     /**
-     * 获取 Sound 的名称
+     * 獲取 Sound 的名稱
      *
-     * @param sound Sound 对象
-     * @return Sound 名称
+     * @param sound Sound 對象
+     * @return Sound 名稱
      */
     @Nonnull
     public static String getSoundName(@Nonnull Sound sound) {
@@ -67,7 +67,7 @@ public final class VersionedSound {
                 return nsKey.getKey();
             }
         } catch (Exception e) {
-            Slimefun.logger().severe("获取 Sound 名称失败: " + e.getMessage());
+            Slimefun.logger().severe("獲取 Sound 名稱失敗: " + e.getMessage());
         }
 
         // fallback
@@ -77,13 +77,13 @@ public final class VersionedSound {
     /**
      * valueOf() 方法兼容
      *
-     * @param name Sound 名称
-     * @return Sound 对象
-     * @throws IllegalArgumentException 名称无效
+     * @param name Sound 名稱
+     * @return Sound 對象
+     * @throws IllegalArgumentException 名稱無效
      */
     @Nonnull
     public static Sound valueOf(@Nonnull String name) throws IllegalArgumentException {
-        Preconditions.checkArgument(name != null, "Sound 名称不能为空");
+        Preconditions.checkArgument(name != null, "Sound 名稱不能為空");
 
         String enumName = name.toUpperCase(Locale.ROOT).replace('.', '_').replace('-', '_');
         try {
@@ -91,7 +91,7 @@ public final class VersionedSound {
                 return (Sound) VALUE_OF_METHOD.invoke(null, enumName);
             }
         } catch (Exception e) {
-            throw new IllegalArgumentException("无法调用 Sound.valueOf: " + name, e);
+            throw new IllegalArgumentException("無法調用 Sound.valueOf: " + name, e);
         }
 
         throw new IllegalArgumentException("Sound.valueOf 方法不可用");

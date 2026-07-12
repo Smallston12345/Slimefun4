@@ -6,10 +6,10 @@ import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunUniversalD
 import lombok.Getter;
 
 /**
- * 这个枚举类用于声明 {@link SlimefunUniversalData} 的特征.
- * 一个通用数据可以有单个或多个特征.
+ * 這個枚舉類用於聲明 {@link SlimefunUniversalData} 的特徵.
+ * 一個通用數據可以有單個或多個特徵.
  * <p>
- * 对于一个通用数据, 它默认拥有作为 k-v 容器的特征.
+ * 對於一個通用數據, 它默認擁有作為 k-v 容器的特徵.
  *
  * @see SlimefunUniversalData
  * @see SlimefunUniversalBlockData
@@ -17,12 +17,12 @@ import lombok.Getter;
 @Getter
 public enum UniversalDataTrait {
     /**
-     * BLOCK 特征标明该通用数据属于 {@link SlimefunUniversalBlockData}
+     * BLOCK 特徵標明該通用數據屬於 {@link SlimefunUniversalBlockData}
      */
     BLOCK("location"),
 
     /**
-     * INVENTORY 特征标明该通用数据拥有一个 {@link UniversalMenu}
+     * INVENTORY 特徵標明該通用數據擁有一個 {@link UniversalMenu}
      */
     INVENTORY("");
 

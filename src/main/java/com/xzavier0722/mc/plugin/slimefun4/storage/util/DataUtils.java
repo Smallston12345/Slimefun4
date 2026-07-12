@@ -18,10 +18,10 @@ import org.bukkit.util.io.BukkitObjectOutputStream;
 public class DataUtils {
     /**
      * 使用 {@link BukkitObjectOutputStream} 序列化 {@link ItemStack}
-     * 为 Base64 字符串，用于数据库存储.
+     * 為 Base64 字符串，用於數據庫存儲.
      *
      * @param itemStack 要序列化的 {@link ItemStack}
-     * @return 序列化后的 Base64 字符串
+     * @return 序列化後的 Base64 字符串
      */
     public static String serializeItemStack(ItemStack itemStack) {
         Debug.log(TestCase.BACKPACK, "Serializing itemstack: " + itemStack);
@@ -39,23 +39,23 @@ public class DataUtils {
                     && Slimefun.getDatabaseManager().getBlockDataStorageType() == StorageType.MYSQL
                     && itemStr.length() > 65535) {
 
-                throw new IllegalArgumentException("检测到过大物品, 请联系物品对应插件开发者解决: " + StringUtil.itemStackToString(itemStack)
+                throw new IllegalArgumentException("檢測到過大物品, 請聯繫物品對應插件開發者解決: " + StringUtil.itemStackToString(itemStack)
                         + ", size = " + itemStr.length());
             }
 
             return itemStr;
         } catch (Throwable e) {
-            Slimefun.logger().log(Level.SEVERE, "序列化物品时出现错误, 将存储空值", e);
+            Slimefun.logger().log(Level.SEVERE, "序列化物品時出現錯誤, 將存儲空值", e);
             return "";
         }
     }
 
     /**
      * 使用 {@link BukkitObjectInputStream} 反序列化 Base64 字符串
-     * 为 {@link ItemStack} 对象.
+     * 為 {@link ItemStack} 對象.
      *
      * @param base64Str 要反序列化的 Base64 字符串
-     * @return 反序列化后的 {@link ItemStack} 对象
+     * @return 反序列化後的 {@link ItemStack} 對象
      */
     @Nullable public static ItemStack deserializeItemStack(String base64Str) {
         if (base64Str == null || base64Str.isEmpty() || base64Str.isBlank()) {
@@ -71,12 +71,12 @@ public class DataUtils {
             Debug.log(TestCase.BACKPACK, "Deserialized itemstack: " + result);
 
             if (result.getType().isAir()) {
-                Slimefun.logger().log(Level.SEVERE, "反序列化数据库中的物品失败! 对应物品无法显示.");
+                Slimefun.logger().log(Level.SEVERE, "反序列化數據庫中的物品失敗! 對應物品無法顯示.");
             }
 
             return result;
         } catch (Exception ex) {
-            throw new RuntimeException("反序列化物品时出现错误, 对应物品无法显示", ex);
+            throw new RuntimeException("反序列化物品時出現錯誤, 對應物品無法顯示", ex);
         }
     }
 

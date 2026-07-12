@@ -62,13 +62,13 @@ public class WitherAssembler extends AbstractEntityAssembler<Wither> {
     protected void constructMenu(BlockMenuPreset preset) {
         preset.addItem(
                 1,
-                new CustomItemStack(getHead(), "&7凋零骷髅头", "", "&f在这里放入凋零骷髅头"),
+                new CustomItemStack(getHead(), "&7凋零骷髏頭", "", "&f在這裏放入凋零骷髏頭"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
-                7, new CustomItemStack(getBody(), "&7灵魂沙", "", "&f在这里放入灵魂沙"), ChestMenuUtils.getEmptyClickHandler());
+                7, new CustomItemStack(getBody(), "&7靈魂沙", "", "&f在這裏放入靈魂沙"), ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 13,
-                new CustomItemStack(Material.CLOCK, "&7冷却时间: &b30 秒", "", "&f这个机器需要半分钟的时间装配", "&f所以耐心等等吧!"),
+                new CustomItemStack(Material.CLOCK, "&7冷卻時間: &b30 秒", "", "&f這個機器需要半分鐘的時間裝配", "&f所以耐心等等吧!"),
                 ChestMenuUtils.getEmptyClickHandler());
     }
 

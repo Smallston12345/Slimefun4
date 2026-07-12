@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import org.bukkit.plugin.Plugin;
 
 /**
- * 提供Wiki相关实用方法
+ * 提供Wiki相關實用方法
  *
  * @author ybw0014
  */
@@ -26,24 +26,24 @@ public final class WikiUtils {
     }
 
     /**
-     * 读取附属的 wiki.json 并设置物品的 Wiki 按钮
+     * 讀取附屬的 wiki.json 並設置物品的 Wiki 按鈕
      *
-     * @param addon 附属 {@link SlimefunAddon} 实例
+     * @param addon 附屬 {@link SlimefunAddon} 實例
      */
     public static void setupJson(Plugin addon) {
         setupJson(addon, page -> page);
     }
 
     /**
-     * 读取附属的 wiki.json 并设置物品的 Wiki 按钮
-     * 可对页面地址进行更改
+     * 讀取附屬的 wiki.json 並設置物品的 Wiki 按鈕
+     * 可對頁面地址進行更改
      *
-     * @param plugin 附属 {@link SlimefunAddon} 实例
-     * @param formatter 对页面地址进行更改
+     * @param plugin 附屬 {@link SlimefunAddon} 實例
+     * @param formatter 對頁面地址進行更改
      */
     public static void setupJson(Plugin plugin, Function<String, String> formatter) {
         if (!(plugin instanceof SlimefunAddon)) {
-            throw new IllegalArgumentException("该插件不是 Slimefun 附属");
+            throw new IllegalArgumentException("該插件不是 Slimefun 附屬");
         }
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(plugin.getClass().getResourceAsStream("/wiki.json"), StandardCharsets.UTF_8))) {
@@ -64,9 +64,9 @@ public final class WikiUtils {
             }
 
             plugin.getLogger()
-                    .log(Level.INFO, MessageFormat.format("加载了 {0} 中 {1} 个物品的 Wiki 页面", plugin.getName(), count));
+                    .log(Level.INFO, MessageFormat.format("加載了 {0} 中 {1} 個物品的 Wiki 頁面", plugin.getName(), count));
         } catch (Exception e) {
-            plugin.getLogger().log(Level.SEVERE, MessageFormat.format("无法加载 {0} 的 wiki.json", plugin.getName()), e);
+            plugin.getLogger().log(Level.SEVERE, MessageFormat.format("無法加載 {0} 的 wiki.json", plugin.getName()), e);
         }
     }
 }

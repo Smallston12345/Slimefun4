@@ -21,7 +21,7 @@ class UraniumResource extends AbstractResource {
     private final BiomeMap<Integer> biomes;
 
     UraniumResource() {
-        super("uranium", "小块铀", SlimefunItems.SMALL_URANIUM, 2, true);
+        super("uranium", "小塊鈾", SlimefunItems.SMALL_URANIUM, 2, true);
 
         MinecraftVersion version = Slimefun.getMinecraftVersion();
 

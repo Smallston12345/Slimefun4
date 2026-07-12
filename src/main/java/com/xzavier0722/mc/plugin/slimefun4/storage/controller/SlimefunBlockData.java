@@ -12,10 +12,10 @@ import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
 
 /**
- * {@link SlimefunBlockData} 是 Slimefun 中机器等方块类物品的数据存储容器。
+ * {@link SlimefunBlockData} 是 Slimefun 中機器等方塊類物品的數據存儲容器。
  * <br/>
- * 它包含了方块对应的键值容器、位置信息和菜单，
- * 是 Slimefun 中常用的方块数据存储类。
+ * 它包含了方塊對應的鍵值容器、位置信息和菜單，
+ * 是 Slimefun 中常用的方塊數據存儲類。
  *
  * @author Xzavier0722
  *

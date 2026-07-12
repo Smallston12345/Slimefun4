@@ -3,7 +3,7 @@ package com.xzavier0722.mc.plugin.slimefun4.storage.common;
 import lombok.Getter;
 
 /**
- * {@link DataScope} 是 Slimefun 数据库表中数据的作用域定义
+ * {@link DataScope} 是 Slimefun 數據庫表中數據的作用域定義
  */
 public enum DataScope {
     NONE,
@@ -21,7 +21,7 @@ public enum DataScope {
     TABLE_METADATA;
 
     /**
-     * 标记当前 {@link DataScope} 的主键字段
+     * 標記當前 {@link DataScope} 的主鍵字段
      */
     @Getter
     private final FieldKey[] primaryKeys;

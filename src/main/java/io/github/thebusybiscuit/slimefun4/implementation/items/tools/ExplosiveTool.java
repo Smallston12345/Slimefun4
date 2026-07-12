@@ -111,9 +111,9 @@ public class ExplosiveTool extends SimpleSlimefunItem<ToolUseHandler> implements
         Bukkit.getServer().getPluginManager().callEvent(event);
 
         /*
-         * 修复: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
+         * 修復: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
          *
-         * 为了修复该问题应该对该列表进行排序，确保头颅先被处理，具体为什么可以看下方 breakBlock 方法。
+         * 為了修復該問題應該對該列表進行排序，確保頭顱先被處理，具體為什麼可以看下方 breakBlock 方法。
          */
         if (Bukkit.getPluginManager().isPluginEnabled("ExoticGarden")) {
             blocksToDestroy.sort((block1, block2) -> Boolean.compare(
@@ -180,13 +180,13 @@ public class ExplosiveTool extends SimpleSlimefunItem<ToolUseHandler> implements
         blockItem.ifPresentOrElse(
                 sfItem -> {
                     /*
-                     * 修复: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
+                     * 修復: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
                      *
-                     * 该问题源于 ExoticGarden MagicalEssence/ExoticGardenFruit useVanillaBlockBreaking 为 true，
-                     * 将调用 breakNaturally 方法而非将其作为 SlimefunItem 进行处理。
+                     * 該問題源於 ExoticGarden MagicalEssence/ExoticGardenFruit useVanillaBlockBreaking 為 true，
+                     * 將調用 breakNaturally 方法而非將其作為 SlimefunItem 進行處理。
                      *
-                     * 此前将 blocks 进行排序，以确保头颅为最先处理的对象，检查头颅的 Y - 1 方块是否为叶子，
-                     * 若为叶子则尝试获取该处的 SlimefunItem，若能获取得到则此处应为异域花园植物，将叶子处直接设置为 AIR 并移除该处 Slimefun 方块数据。
+                     * 此前將 blocks 進行排序，以確保頭顱為最先處理的對象，檢查頭顱的 Y - 1 方塊是否為葉子，
+                     * 若為葉子則嘗試獲取該處的 SlimefunItem，若能獲取得到則此處應為異域花園植物，將葉子處直接設置為 AIR 並移除該處 Slimefun 方塊數據。
                      */
                     if (Bukkit.getPluginManager().isPluginEnabled("ExoticGarden")
                             && block.getType().equals(Material.PLAYER_HEAD)) {

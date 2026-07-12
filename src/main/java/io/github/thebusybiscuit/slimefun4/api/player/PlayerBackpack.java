@@ -305,7 +305,7 @@ public class PlayerBackpack extends SlimefunInventoryHolder {
      * This will open the {@link Inventory} of this backpack to every {@link Player}
      * that was passed onto this method.
      * <p>
-     * 二进制兼容
+     * 二進制兼容
      *
      * @param p The player who this Backpack will be shown to
      */

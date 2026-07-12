@@ -48,7 +48,7 @@ public class SlimefunUniversalBlockData extends SlimefunUniversalData {
 
         var data = getData(UniversalDataTrait.BLOCK.getReservedKey());
 
-        // 自动修复丢失的位置数据
+        // 自動修復丟失的位置數據
         if (lastPresent != null) {
             if (data == null) {
                 setTraitData(UniversalDataTrait.BLOCK, LocationUtils.getLocKey(lastPresent.toLocation()));
@@ -68,7 +68,7 @@ public class SlimefunUniversalBlockData extends SlimefunUniversalData {
                 return null;
             }
 
-            // 修复因使用不一致的文本转换导致的位置无法解析
+            // 修復因使用不一致的文本轉換導致的位置無法解析
             oldLocationFix(data);
         }
 

@@ -171,10 +171,10 @@ public class GPSNetwork {
                 4,
                 new CustomItemStack(
                         SlimefunItems.GPS_CONTROL_PANEL,
-                        "&7网络信息",
+                        "&7網絡信息",
                         "",
-                        "&8\u21E8 &7状态: " + getStatusText(p, complexity),
-                        "&8\u21E8 &7复杂度: &f" + complexity));
+                        "&8\u21E8 &7狀態: " + getStatusText(p, complexity),
+                        "&8\u21E8 &7複雜度: &f" + complexity));
         menu.addMenuClickHandler(4, ChestMenuUtils.getEmptyClickHandler());
 
         menu.addItem(
@@ -206,14 +206,14 @@ public class GPSNetwork {
                         slot,
                         new CustomItemStack(
                                 SlimefunItems.GPS_TRANSMITTER,
-                                "&bGPS 发射器",
+                                "&bGPS 發射器",
                                 "&8\u21E8 &7世界: &f" + l.getWorld().getName(),
                                 "&8\u21E8 &7X: &f" + l.getX(),
                                 "&8\u21E8 &7Y: &f" + l.getY(),
                                 "&8\u21E8 &7Z: &f" + l.getZ(),
                                 "",
-                                "&8\u21E8 &7信号强度: &f" + transmitter.getMultiplier(l.getBlockY()),
-                                "&8\u21E8 &7延迟: &f" + NumberUtils.roundDecimalNumber(1000D / l.getY()) + "ms"));
+                                "&8\u21E8 &7信號強度: &f" + transmitter.getMultiplier(l.getBlockY()),
+                                "&8\u21E8 &7延遲: &f" + NumberUtils.roundDecimalNumber(1000D / l.getY()) + "ms"));
                 menu.addMenuClickHandler(slot, ChestMenuUtils.getEmptyClickHandler());
 
                 index++;
@@ -295,10 +295,10 @@ public class GPSNetwork {
                     4,
                     new CustomItemStack(
                             SlimefunItems.GPS_CONTROL_PANEL,
-                            "&7网络信息",
+                            "&7網絡信息",
                             "",
-                            "&8\u21E8 &7状态: " + (complexity > 0 ? "&2&l在线" : "&4&l离线"),
-                            "&8\u21E8 &7复杂度: &f" + complexity));
+                            "&8\u21E8 &7狀態: " + (complexity > 0 ? "&2&l在線" : "&4&l離線"),
+                            "&8\u21E8 &7複雜度: &f" + complexity));
             menu.addMenuClickHandler(4, ChestMenuUtils.getEmptyClickHandler());
 
             menu.addItem(

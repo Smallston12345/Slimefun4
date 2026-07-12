@@ -33,9 +33,9 @@ public enum SlimefunGuideMode {
     }
 
     /**
-     * 获取指南书样式的显示名称
+     * 獲取指南書樣式的顯示名稱
      *
-     * @return 指南书样式的显示名称
+     * @return 指南書樣式的顯示名稱
      */
     public @Nonnull String getDisplayName() {
         return displayName;

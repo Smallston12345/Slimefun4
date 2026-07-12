@@ -718,12 +718,12 @@ public final class SlimefunItems {
 
     /*		 Armor 		*/
     public static final SlimefunItemStack GLOWSTONE_HELMET = new SlimefunItemStack(
-            "GLOWSTONE_HELMET", Material.LEATHER_HELMET, Color.YELLOW, "&e&l螢石頭盔", "", "&a&o像太陽一樣閃耀!", "", "&9+ 夜視效果");
+            "GLOWSTONE_HELMET", Material.LEATHER_HELMET, Color.YELLOW, "&e&l螢光石頭盔", "", "&a&o像太陽一樣閃耀!", "", "&9+ 夜視效果");
     public static final SlimefunItemStack GLOWSTONE_CHESTPLATE = new SlimefunItemStack(
             "GLOWSTONE_CHESTPLATE",
             Material.LEATHER_CHESTPLATE,
             Color.YELLOW,
-            "&e&l螢石胸甲",
+            "&e&l螢光石胸甲",
             "",
             "&a&o像太陽一樣閃耀!",
             "",
@@ -732,13 +732,13 @@ public final class SlimefunItems {
             "GLOWSTONE_LEGGINGS",
             Material.LEATHER_LEGGINGS,
             Color.YELLOW,
-            "&e&l螢石護腿",
+            "&e&l螢光石護腿",
             "",
             "&a&o像太陽一樣閃耀!",
             "",
             "&9+ 夜視效果");
     public static final SlimefunItemStack GLOWSTONE_BOOTS = new SlimefunItemStack(
-            "GLOWSTONE_BOOTS", Material.LEATHER_BOOTS, Color.YELLOW, "&e&l螢石靴子", "", "&a&o像太陽一樣閃耀!", "", "&9+ 夜視效果");
+            "GLOWSTONE_BOOTS", Material.LEATHER_BOOTS, Color.YELLOW, "&e&l螢光石靴子", "", "&a&o像太陽一樣閃耀!", "", "&9+ 夜視效果");
     public static final SlimefunItemStack RAINBOW_LEATHER =
             new SlimefunItemStack("RAINBOW_LEATHER", Material.RABBIT_HIDE, Color.FUCHSIA, "&d彩虹皮革", "", "&f用於合成彩虹裝備");
     public static final SlimefunItemStack RAINBOW_HELMET = new SlimefunItemStack(

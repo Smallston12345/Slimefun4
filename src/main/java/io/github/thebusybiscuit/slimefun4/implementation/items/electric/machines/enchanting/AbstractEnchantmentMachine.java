@@ -63,7 +63,7 @@ abstract class AbstractEnchantmentMachine extends AContainer {
 
     protected void showEnchantmentLevelWarning(@Nonnull BlockMenu menu) {
         if (!useLevelLimit.getValue()) {
-            throw new IllegalStateException("自動附/祛魔機等級限制未被啓用, 無法展示警告信息.");
+            throw new IllegalStateException("自動附/祛魔機等級限制未被啟用, 無法展示警告信息.");
         }
 
         String notice = ChatColors.color(Slimefun.getLocalization().getMessage("messages.above-limit-level"));
@@ -74,7 +74,7 @@ abstract class AbstractEnchantmentMachine extends AContainer {
 
     protected void showEnchantmentLimitWarning(@Nonnull BlockMenu menu) {
         if (!useEnchantLimit.getValue()) {
-            throw new IllegalStateException("自動附/祛魔機附魔數量限制未被啓用, 無法展示警告信息.");
+            throw new IllegalStateException("自動附/祛魔機附魔數量限制未被啟用, 無法展示警告信息.");
         }
 
         String notice = ChatColors.color(Slimefun.getLocalization().getMessage("messages.above-enchant-limit"));

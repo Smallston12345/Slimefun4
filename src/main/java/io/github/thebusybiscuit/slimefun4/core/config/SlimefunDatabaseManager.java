@@ -68,7 +68,7 @@ public class SlimefunDatabaseManager {
             blockDataController.init(blockStorageAdapter, readExecutorThread, writeExecutorThread);
 
             if (blockStorageConfig.getBoolean("delayedWriting.enable")) {
-                plugin.getLogger().log(Level.INFO, "已啓用延時寫入功能");
+                plugin.getLogger().log(Level.INFO, "已啟用延時寫入功能");
                 blockDataController.initDelayedSaving(
                         plugin,
                         blockStorageConfig.getInt("delayedWriting.delayedSecond"),

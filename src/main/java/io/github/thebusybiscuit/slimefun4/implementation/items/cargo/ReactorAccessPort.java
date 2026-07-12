@@ -151,16 +151,16 @@ public class ReactorAccessPort extends SlimefunItem {
 
         preset.addItem(
                 1,
-                new CustomItemStack(SlimefunItems.URANIUM, "&7燃料槽", "", "&r這裏可以放入放射性燃料, 例如:", "&2鈾 &r或 &a鎿"),
+                new CustomItemStack(SlimefunItems.URANIUM, "&7燃料槽", "", "&r這裡可以放入放射性燃料, 例如:", "&2鈾 &r或 &a錼"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 22,
-                new CustomItemStack(SlimefunItems.PLUTONIUM, "&7副產品槽", "", "&r這裏可以獲取反應堆在運行中產生的副產物", "&r例如 &a鎿 &r或 &7鈈"),
+                new CustomItemStack(SlimefunItems.PLUTONIUM, "&7副產品槽", "", "&r這裡可以獲取反應堆在運行中產生的副產物", "&r例如 &a錼 &r或 &7鈽"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 7,
                 new CustomItemStack(
-                        SlimefunItems.REACTOR_COOLANT_CELL, "&b冷卻劑", "", "&r這裏可以放入冷卻劑", "&4如果沒有冷卻劑, 你的反應堆", "&4將會爆炸"),
+                        SlimefunItems.REACTOR_COOLANT_CELL, "&b冷卻劑", "", "&r這裡可以放入冷卻劑", "&4如果沒有冷卻劑, 你的反應堆", "&4將會爆炸"),
                 ChestMenuUtils.getEmptyClickHandler());
     }
 

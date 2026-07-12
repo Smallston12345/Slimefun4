@@ -127,7 +127,7 @@ public class ProgrammableAndroid extends SlimefunItem
                 var uniData = StorageCacheUtils.getUniversalBlock(menu.getUuid());
 
                 menu.replaceExistingItem(
-                        15, new CustomItemStack(HeadTexture.SCRIPT_START.getAsItemStack(), "&a啓動/繼續運行"));
+                        15, new CustomItemStack(HeadTexture.SCRIPT_START.getAsItemStack(), "&a啟動/繼續運行"));
                 menu.addMenuClickHandler(15, (p, slot, item, action) -> {
                     Slimefun.getLocalization().sendMessage(p, "android.started", true);
                     uniData.setData("paused", "false");
@@ -145,7 +145,7 @@ public class ProgrammableAndroid extends SlimefunItem
                 menu.replaceExistingItem(
                         16,
                         new CustomItemStack(
-                                HeadTexture.ENERGY_REGULATOR.getAsItemStack(), "&b內存核心", "", "&8\u21E8 &7單擊打開腳本編輯器"));
+                                HeadTexture.ENERGY_REGULATOR.getAsItemStack(), "&b內存核心", "", "&8\u21E8 &7點擊打開腳本編輯器"));
                 menu.addMenuClickHandler(16, (p, slot, item, action) -> {
                     uniData.setData("paused", "true");
                     Slimefun.getLocalization().sendMessage(p, "android.stopped", true);
@@ -474,7 +474,7 @@ public class ProgrammableAndroid extends SlimefunItem
         menu.addItem(
                 48,
                 new CustomItemStack(
-                        HeadTexture.SCRIPT_UP.getAsItemStack(), "&e上傳腳本", "", "&6單擊 &7將你正在用的腳本", "&7上傳到服務器"));
+                        HeadTexture.SCRIPT_UP.getAsItemStack(), "&e上傳腳本", "", "&6點擊 &7將你正在用的腳本", "&7上傳到服務器"));
         menu.addMenuClickHandler(48, (pl, slot, item, action) -> {
             uploadScript(pl, uniData, page);
             return false;

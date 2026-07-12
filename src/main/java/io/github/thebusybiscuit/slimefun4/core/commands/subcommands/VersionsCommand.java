@@ -167,7 +167,7 @@ class VersionsCommand extends SubCommand {
                         Component hoverComp = Component.text()
                                 .append(Component.text("作者: ", NamedTextColor.YELLOW))
                                 .append(Component.text(authors, NamedTextColor.YELLOW))
-                                .append(Component.text("\n> 單擊打開反饋頁面", NamedTextColor.GOLD))
+                                .append(Component.text("\n> 點擊打開反饋頁面", NamedTextColor.GOLD))
                                 .build();
 
                         hoverEvent = HoverEvent.showText(hoverComp);
@@ -202,7 +202,7 @@ class VersionsCommand extends SubCommand {
                         }
                         Component hoverComp = Component.text()
                                 .append(Component.text("此插件已被禁用.\n請檢查後台是否有報錯.", NamedTextColor.RED))
-                                .append(Component.text("\n> 單擊打開反饋頁面", NamedTextColor.DARK_RED))
+                                .append(Component.text("\n> 點擊打開反饋頁面", NamedTextColor.DARK_RED))
                                 .build();
 
                         hoverEvent = HoverEvent.showText(hoverComp);

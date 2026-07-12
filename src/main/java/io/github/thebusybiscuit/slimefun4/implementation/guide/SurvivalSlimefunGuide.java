@@ -327,7 +327,7 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
                             "&7" + sfitem.getId(),
                             "&4&l" + Slimefun.getLocalization().getMessage(p, "guide.locked"),
                             "",
-                            "&a> 單擊解鎖",
+                            "&a> 點擊解鎖",
                             "",
                             "&7需要 &b",
                             lore)));
@@ -847,7 +847,7 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
     @ParametersAreNonnullByDefault
     private void printErrorMessage(Player p, Throwable x) {
         p.sendMessage(ChatColor.DARK_RED + "服務器發生了一個內部錯誤. 請聯繫管理員處理.");
-        Slimefun.logger().log(Level.SEVERE, "在打開指南書裏的 Slimefun 物品時發生了意外!", x);
+        Slimefun.logger().log(Level.SEVERE, "在打開指南書裡的 Slimefun 物品時發生了意外!", x);
     }
 
     @ParametersAreNonnullByDefault

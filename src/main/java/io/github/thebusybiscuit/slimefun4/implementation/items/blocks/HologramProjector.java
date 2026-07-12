@@ -143,8 +143,8 @@ public class HologramProjector extends SlimefunItem implements HologramOwner {
                                                 StorageCacheUtils.getData(projector.getLocation(), OFFSET_PARAMETER))
                                         + 1.0D),
                         "",
-                        "&f左鍵單擊: &7+0.1",
-                        "&f右鍵單擊: &7-0.1"));
+                        "&f左鍵點擊: &7+0.1",
+                        "&f右鍵點擊: &7-0.1"));
         menu.addMenuClickHandler(1, (pl, slot, item, action) -> {
             var blockData = StorageCacheUtils.getBlock(projector.getLocation());
             double offset = NumberUtils.reparseDouble(

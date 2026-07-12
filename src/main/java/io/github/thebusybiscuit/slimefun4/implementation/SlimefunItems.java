@@ -65,7 +65,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack GOLD_PAN =
             new SlimefunItemStack("GOLD_PAN", Material.BOWL, "&6淘金盤", "&a&o可以獲得各種各樣的礦物", "", "&7&e右鍵&7 從沙礫中淘金");
     public static final SlimefunItemStack NETHER_GOLD_PAN =
-            new SlimefunItemStack("NETHER_GOLD_PAN", Material.BOWL, "&4下界淘金盤", "", "&7&e右鍵&7 從靈魂沙中淘金");
+            new SlimefunItemStack("NETHER_GOLD_PAN", Material.BOWL, "&4地獄淘金盤", "", "&7&e右鍵&7 從靈魂沙中淘金");
     public static final SlimefunItemStack PARACHUTE = new SlimefunItemStack(
             "PARACHUTE", Material.LEATHER_CHESTPLATE, Color.WHITE, "&r&l降落傘", "", LoreBuilder.CROUCH_TO_USE);
     public static final SlimefunItemStack GRAPPLING_HOOK =
@@ -983,7 +983,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack MAGICAL_GLASS =
             new SlimefunItemStack("MAGICAL_GLASS", Material.GLASS_PANE, "&6魔法玻璃", "", "&a&o被多種魔法道具使用");
     public static final SlimefunItemStack SYNTHETIC_SHULKER_SHELL = new SlimefunItemStack(
-            "SYNTHETIC_SHULKER_SHELL", Material.SHULKER_SHELL, "&d人造潛影殼", "", "&f可以用於工作台合成", "&f就像普通的潛影殼一樣");
+            "SYNTHETIC_SHULKER_SHELL", Material.SHULKER_SHELL, "&d人造界伏殼", "", "&f可以用於工作台合成", "&f就像普通的界伏殼一樣");
     public static final SlimefunItemStack BASIC_CIRCUIT_BOARD =
             new SlimefunItemStack("BASIC_CIRCUIT_BOARD", Material.ACTIVATOR_RAIL, "&b基礎電路板");
     public static final SlimefunItemStack ADVANCED_CIRCUIT_BOARD =
@@ -1036,7 +1036,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack ESSENCE_OF_AFTERLIFE =
             new SlimefunItemStack("ESSENCE_OF_AFTERLIFE", Material.GUNPOWDER, "&4來世精華");
     public static final SlimefunItemStack STRANGE_NETHER_GOO = new SlimefunItemStack(
-            "STRANGE_NETHER_GOO", Material.PURPLE_DYE, "&5奇怪的下界粘液", "", "&f一種奇怪的物質", "&f可以和豬靈以物換物獲得");
+            "STRANGE_NETHER_GOO", Material.PURPLE_DYE, "&5奇怪的地獄黏液", "", "&f一種奇怪的物質", "&f可以和豬靈以物換物獲得");
     public static final SlimefunItemStack ELECTRO_MAGNET =
             new SlimefunItemStack("ELECTRO_MAGNET", HeadTexture.MAGNET, "&c電磁鐵");
     public static final SlimefunItemStack HEATING_COIL =
@@ -2332,19 +2332,19 @@ public final class SlimefunItems {
     public static final SlimefunItemStack NETHER_ICE = new SlimefunItemStack(
             "NETHER_ICE",
             HeadTexture.NETHER_ICE,
-            "&e下界冰",
+            "&e地獄冰",
             "",
             LoreBuilder.radioactive(Radioactivity.MODERATE),
             LoreBuilder.HAZMAT_SUIT_REQUIRED);
     public static final SlimefunItemStack ENRICHED_NETHER_ICE = new SlimefunItemStack(
             "ENRICHED_NETHER_ICE",
             HeadTexture.ENRICHED_NETHER_ICE,
-            "&e濃縮下界冰",
+            "&e濃縮地獄冰",
             "",
             LoreBuilder.radioactive(Radioactivity.VERY_HIGH),
             LoreBuilder.HAZMAT_SUIT_REQUIRED);
     public static final SlimefunItemStack NETHER_ICE_COOLANT_CELL =
-            new SlimefunItemStack("NETHER_ICE_COOLANT_CELL", HeadTexture.NETHER_ICE_COOLANT_CELL, "&6下界冰冷卻劑");
+            new SlimefunItemStack("NETHER_ICE_COOLANT_CELL", HeadTexture.NETHER_ICE_COOLANT_CELL, "&6地獄冰冷卻劑");
 
     // Cargo
     public static final SlimefunItemStack CARGO_MANAGER =
@@ -2552,11 +2552,11 @@ public final class SlimefunItems {
     public static final SlimefunItemStack NETHER_STAR_REACTOR = new SlimefunItemStack(
             "NETHERSTAR_REACTOR",
             HeadTexture.NETHER_STAR_REACTOR,
-            "&r下界之星反應堆",
+            "&r地獄之星反應堆",
             "",
-            "&r需要下界之星",
+            "&r需要地獄之星",
             "&8\u21E8 &b必須被水包圍",
-            "&8\u21E8 &b必須使用下界冰冷卻劑工作",
+            "&8\u21E8 &b必須使用地獄冰冷卻劑工作",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             "&8\u21E8 &e\u26A1 &732768 J 可儲存",

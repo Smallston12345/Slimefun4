@@ -64,11 +64,11 @@ public class IronGolemAssembler extends AbstractEntityAssembler<IronGolem> {
     protected void constructMenu(BlockMenuPreset preset) {
         preset.addItem(
                 1,
-                new CustomItemStack(getHead(), "&7在此處放入南瓜", "", "&f這裏可以放入南瓜"),
+                new CustomItemStack(getHead(), "&7在此處放入南瓜", "", "&f這裡可以放入南瓜"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 7,
-                new CustomItemStack(getBody(), "&7在此處放入鐵塊", "", "&f這裏可以放入鐵塊"),
+                new CustomItemStack(getBody(), "&7在此處放入鐵塊", "", "&f這裡可以放入鐵塊"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 13,

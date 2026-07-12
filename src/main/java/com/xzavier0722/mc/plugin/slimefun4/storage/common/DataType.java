@@ -6,7 +6,7 @@ package com.xzavier0722.mc.plugin.slimefun4.storage.common;
  */
 public enum DataType {
     /**
-     * 玩家檔案，通常包含研究進度、揹包等其他玩家相關數據。
+     * 玩家檔案，通常包含研究進度、背包等其他玩家相關數據。
      */
     PLAYER_PROFILE,
 

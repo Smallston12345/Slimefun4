@@ -61,7 +61,7 @@ public class CargoInputNode extends AbstractFilterNode {
                             SlimefunUtils.getCustomHead(HeadTexture.ENERGY_REGULATOR.getTexture()),
                             "&7輪循模式: &4\u2718",
                             "",
-                            "&e> 單擊啓用輪循模式",
+                            "&e> 點擊啟用輪循模式",
                             "&e(物品將會在信道中平均分配)"));
             menu.addMenuClickHandler(24, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), ROUND_ROBIN_MODE, String.valueOf(true));
@@ -75,7 +75,7 @@ public class CargoInputNode extends AbstractFilterNode {
                             SlimefunUtils.getCustomHead(HeadTexture.ENERGY_REGULATOR.getTexture()),
                             "&7輪循模式: &2\u2714",
                             "",
-                            "&e> 單擊關閉輪循模式",
+                            "&e> 點擊關閉輪循模式",
                             "&e(物品將會在信道中平均分配)"));
             menu.addMenuClickHandler(24, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), ROUND_ROBIN_MODE, String.valueOf(false));
@@ -95,7 +95,7 @@ public class CargoInputNode extends AbstractFilterNode {
                             Material.WRITABLE_BOOK,
                             "&7\"智能填充\" 模式: &4\u2718",
                             "",
-                            "&e> 單擊啓用",
+                            "&e> 點擊啟用",
                             "",
                             "&f打開後, 貨運節點會嘗試",
                             "&f讓貨運網絡中的物品保持在一定數量",
@@ -113,7 +113,7 @@ public class CargoInputNode extends AbstractFilterNode {
                             Material.WRITTEN_BOOK,
                             "&7\"智能填充\" 模式: &2\u2714",
                             "",
-                            "&e> 單擊禁用",
+                            "&e> 點擊禁用",
                             "",
                             "&f打開後, 貨運節點會嘗試",
                             "&f讓貨運網絡中的物品保持在一定數量",

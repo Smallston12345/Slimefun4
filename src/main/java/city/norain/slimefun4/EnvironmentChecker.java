@@ -79,7 +79,7 @@ class EnvironmentChecker {
                         sf,
                         () -> {
                             if (Bukkit.getPluginManager().getPlugin("SlimeGlue") == null) {
-                                sf.getLogger().log(Level.WARNING, "檢測到沒有安裝 SlimeGlue (粘液膠), 你將缺失對一些插件的額外保護檢查!");
+                                sf.getLogger().log(Level.WARNING, "檢測到沒有安裝 SlimeGlue (黏液膠), 你將缺失對一些插件的額外保護檢查!");
                                 sf.getLogger().log(Level.WARNING, "下載: https://github.com/Xzavier0722/SlimeGlue");
                             }
                         },

@@ -43,7 +43,7 @@ public class MagicEyeOfEnder extends SimpleSlimefunItem<ItemUseHandler> {
             } else {
                 // add message to warn player
                 Slimefun.getLocalization()
-                        .sendMessage(p, "messages.usage", true, msg -> msg.replace("%usage%", "穿戴全套末影護甲以發射珍珠"));
+                        .sendMessage(p, "messages.usage", true, msg -> msg.replace("%usage%", "穿戴全套終界護甲以發射珍珠"));
             }
         };
     }

@@ -59,7 +59,7 @@ class GuideModeOption implements SlimefunGuideOption<SlimefunGuideMode> {
             lore.add((selectedMode == SlimefunGuideMode.CHEAT_MODE ? ChatColor.GREEN : ChatColor.GRAY) + "作弊模式");
 
             lore.add("");
-            lore.add(ChatColor.GRAY + "\u21E8 " + ChatColor.YELLOW + "單擊修改指南樣式");
+            lore.add(ChatColor.GRAY + "\u21E8 " + ChatColor.YELLOW + "點擊修改指南樣式");
             meta.setLore(lore);
             item.setItemMeta(meta);
 

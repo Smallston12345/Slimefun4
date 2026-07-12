@@ -120,7 +120,7 @@ abstract class AbstractFilterNode extends AbstractCargoNode {
 
         if (lore == null || lore.equals(String.valueOf(true))) {
             menu.replaceExistingItem(
-                    25, new CustomItemStack(Material.MAP, "&7匹配在物品名稱底下的文字: &2\u2714", "", "&e> 點擊啓用匹配文字"));
+                    25, new CustomItemStack(Material.MAP, "&7匹配在物品名稱底下的文字: &2\u2714", "", "&e> 點擊啟用匹配文字"));
             menu.addMenuClickHandler(25, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), FILTER_LORE, String.valueOf(false));
                 updateBlockMenu(menu, b);

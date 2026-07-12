@@ -192,7 +192,7 @@ public final class SlimefunGuideSettings {
                         "",
                         "&7Slimefun 是一個大型項目，但附屬插件的存在",
                         "&7能讓 Slimefun 真正的發光發亮",
-                        "&7看一看它們，也許你要尋找的附屬插件就在那裏!",
+                        "&7看一看它們，也許你要尋找的附屬插件就在那裡!",
                         "",
                         "&7該服務器已安裝附屬插件: &b" + Slimefun.getInstalledAddons().size(),
                         "",

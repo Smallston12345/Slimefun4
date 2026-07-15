@@ -101,7 +101,7 @@ public interface EnergyNetComponent extends ItemAttribute {
 
     @Deprecated
     default int getCharge(@Nonnull Location l, @Nonnull Config config) {
-        Slimefun.logger().log(Level.FINE, "正在调用旧 BlockStorage 的方法, 建议使用对应附属的新方块存储适配版.");
+        Slimefun.logger().log(Level.FINE, "正在調用舊 BlockStorage 的方法, 建議使用對應附屬的新方塊存儲適配版.");
 
         Validate.notNull(l, "Location was null!");
 

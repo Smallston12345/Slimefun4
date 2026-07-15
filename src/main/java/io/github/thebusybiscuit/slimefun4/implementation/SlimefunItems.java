@@ -1386,7 +1386,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack STAFF_ELEMENTAL =
             new SlimefunItemStack("STAFF_ELEMENTAL", Material.STICK, "&6元素法杖");
     public static final SlimefunItemStack STAFF_WIND = new SlimefunItemStack(
-            "STAFF_ELEMENTAL_WIND", Material.STICK, "&6元素法杖 &7- &b&o風", "", "&7元素: &b&o風", "", "&7&e右鍵&7 以將你吹飛");
+            "STAFF_ELEMENTAL_WIND", Material.STICK, "&6元素法杖 &7- &b&o風", "", "&7元素: &b&o風");
     public static final SlimefunItemStack STAFF_FIRE = new SlimefunItemStack(
             "STAFF_ELEMENTAL_FIRE", Material.STICK, "&6元素法杖 &7- &c&o火", "", "&7元素: &c&o火", "", "&c讓火焰淨化一切!");
     public static final SlimefunItemStack STAFF_WATER = new SlimefunItemStack(

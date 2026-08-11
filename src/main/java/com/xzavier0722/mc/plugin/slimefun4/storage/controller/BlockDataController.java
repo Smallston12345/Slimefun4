@@ -1079,13 +1079,6 @@ public class BlockDataController extends ADataController {
 
             if (uniData instanceof SlimefunUniversalBlockData ubd) {
                 if (ubd.hasTrait(UniversalDataTrait.BLOCK)) {
-                    // 初始化 上次出現位置
-                    var lStr = ubd.getData(UniversalDataTrait.BLOCK.getReservedKey());
-
-                    if (lStr != null && !lStr.isBlank()) {
-                        ubd.setLastPresent(LocationUtils.toLocation(lStr));
-                    }
-
                     var sfItem = SlimefunItem.getById(ubd.getSfId());
 
                     if (sfItem != null && sfItem.isTicking() && ubd.getLastPresent() != null) {
@@ -1472,7 +1465,7 @@ public class BlockDataController extends ADataController {
     }
 
     void scheduleDelayedChunkDataUpdate(SlimefunChunkData chunkData, String key) {
-        var scopeKey = new ChunkKey(DataScope.NONE, chunkData.getChunk());
+        var scopeKey = new ChunkKey(DataScope.NONE, chunkData.getKey());
         var reqKey = new RecordKey(DataScope.CHUNK_DATA);
         reqKey.addCondition(FieldKey.CHUNK, chunkData.getKey());
         reqKey.addCondition(FieldKey.DATA_KEY, key);

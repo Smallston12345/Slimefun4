@@ -69,6 +69,8 @@ commands:
     in-progress: "&a遷移正在進行中..."
   blockdata:
     description: '操作粘液方塊數據'
+  tick:
+    description: "操作粘液刻斷點"
 placeholderapi:
   profile-loading: '加載中...'
 guide:
@@ -164,6 +166,8 @@ actionbar:
   radiation: '&6輻射暴露等級：&c%level%&7/&e100'
 
 messages:
+  tick-rate: "Tick rate: %tick-rate%"
+  tick-query: "Tick Freeze: %mode%, Tick rate: %tick-rate%"
   android-no-permission: "&c你的機器人在某個你沒有權限的領地/地皮中無法工作, 機器人已自動暫停運行."
   not-researched: '&4你的知識還不足以理解這個物品. &c你需要先解鎖 &f"%item%"&f'
   not-enough-xp: '&4你沒有足夠的經驗來解鎖這個研究'
@@ -277,6 +281,13 @@ messages:
   above-limit-level: '&c你要附/祛魔物品的附魔等級超過了 %level% 級!'
   pickaxe-of-the-seeker:
     no-ores: '&c附近找不到任何礦石!'
+  tick-mode: "&eTick Freeze: %mode%"
+  not-found: "&c無效的參數"
+  not-a-number: "&c請輸入一個數字"
+  tick-freeze-predicate-reset: "&e已重置 Tick Freeze 自定義檢測"
+  tick-freeze-on: "開啟"
+  tick-freeze-off: "關閉"
+  wrong-world: "不在同一世界！無法高亮方塊！"
 machines:
   pattern-not-found: '&e抱歉, 這不是正確的合成配方, 請檢查發射器里放置物品的順序.'
   unknown-material: '&e抱歉, 我無法識別在發射器里的物品. 請按照合成配方放置物品.'

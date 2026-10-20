@@ -71,4 +71,13 @@ class TestMinecraftVersion {
         Assertions.assertTrue(MinecraftVersion.MINECRAFT_1_21.isBefore(MinecraftVersion.MINECRAFT_26_1));
         Assertions.assertFalse(MinecraftVersion.MINECRAFT_26_1.isBefore(MinecraftVersion.MINECRAFT_1_21));
     }
+
+    @Test
+    @DisplayName("Three-arg API should support 26.3.x series")
+    void testThreeArgMatches26Dot3() {
+        Assertions.assertTrue(MinecraftVersion.MINECRAFT_26_3.isMinecraftVersion(26, 3, 0));
+        Assertions.assertTrue(MinecraftVersion.MINECRAFT_26_3.isMinecraftVersion(26, 3, 99));
+        Assertions.assertFalse(MinecraftVersion.MINECRAFT_26_3.isMinecraftVersion(26, 2, 99));
+        Assertions.assertFalse(MinecraftVersion.MINECRAFT_26_2.isMinecraftVersion(26, 3, 0));
+    }
 }
